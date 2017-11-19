@@ -10,12 +10,3 @@
 public class Problem002 {
     //英文题目看不懂。。。
 }
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
