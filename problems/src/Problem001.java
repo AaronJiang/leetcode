@@ -13,8 +13,8 @@ import java.util.HashMap;
  */
 public class Problem001 {
     public static void main(String[] args) {
-        int[] arr = {2, 7, 11, 15};
-        int[] result = Problem001.twoSum(arr, 13);
+        int[] arr = {3,3};
+        int[] result = Problem001.twoSum(arr, 6);
         System.out.println(Arrays.toString(result));
     }
 
@@ -31,15 +31,12 @@ public class Problem001 {
 
         for (int i = 0; i < nums.length; i++) {
             int subtractor = target - nums[i];
-            if (subtractor < 0) {
-                break;
-            }
 
-            if (map.containsKey(target - nums[i])) {
+            if (map.containsKey(target - nums[i]) && map.get(target-nums[i]) != i) {
                 return new int[]{i, map.get(target-nums[i])};
             }
         }
 
-        throw new IllegalArgumentException("no match");
+        return new int[]{};
     }
 }
